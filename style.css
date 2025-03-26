@@ -1,1 +1,217 @@
-@import "tailwindcss";
+*{
+    margin: 0;
+    font-family: the-medium;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    background-image: url("media/nemoone/web-background.jfif");
+    background-repeat:repeat-y;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+/* ----------------------- Header -----------------------*/
+
+#header-container{
+    display: flex;
+    height: 70px;
+    width: 100%;
+    position: relative;
+    top: 16px;
+    align-items: center;
+    justify-content: center;
+}
+.header-content-holder{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+/* ----- navigation bar ----- */
+nav{
+    background-color: #f7f7f7;
+    place-self: center;
+    justify-self: center;
+    min-width: fit-content;
+    border-radius: 8px;
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    transition: 0.13s;
+    font-size: 12px;
+    border-radius: 8px;
+}
+nav a:hover{
+    background-color: #ececec;
+}
+/* ----- logo -----  */
+.logo-holder{
+    z-index: 2;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-image: url("media/nemoone/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.logo-name-container{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----------------------- Home -----------------------*/
+#home-container{
+    position: relative;
+    width: 100%;
+    height: 667px;
+    display: flex;
+}
+.home-section{
+    display: flex;
+    float: right;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----- image ----- */
+.home-vactor-holder{
+    height: 90%;
+    width: 80%;
+    place-self: center;
+    justify-self: center;
+    border-radius: 10px 40px;
+    background-image: url("media/nemoone/nemmonecar.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* ----- text ----- */
+.home-text-holder{
+    height: 70%;
+    min-width: 80%;
+    place-self: center;
+    justify-self: center;
+    text-align: center;
+    justify-content: center;
+}
+.home-inner-text-holder{
+    padding-right: 56px;
+    text-align: end;
+    justify-content: center;
+    color: #1c1209;
+    margin: 20px auto;
+}
+.home-inner-text-holder p{
+    font-size: 35px;
+    font-family: the-bold;
+}
+.home-inner-text-holder pre{
+    font-size: 15px;
+}
+/* ----- CTA ----- */
+.home-button-holder a{
+    background-color: rgba(162, 17, 162, 0.871);
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+    padding: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    place-self: center;
+}
+.home-button-holder{
+    width: 163%;
+    display: flex;
+    justify-content: center;
+}
+.home-button-holder a:hover{
+    box-shadow: 0px 0px 3px 1px purple;
+    color: rgba(162, 17, 162, 0.871);
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: the-bold;
+    src: url(fonts/Estedad-Bold.ttf);
+}
+@font-face {
+    font-family: the-medium;
+    src: url(fonts/Estedad-Medium.ttf);
+}
+@font-face {
+    font-family: extra-bold;
+    src: url(fonts/Estedad-ExtraBold.ttf);
+}

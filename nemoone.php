@@ -8,10 +8,10 @@
 </head>
 <body>
     <!-------- Nemoone container -------->
-    <div id="nemoone">
+    <section id="nemoone">
         <div class="introduce-section">
             <span class="nemoone-text">
-بیش از 60 نمونه کار در زمینه دیزاین تولد، دکور فرمالیته و بادکنک ارایی
+..بیش از 60 نمونه کار در زمینه دیزاین تولد، دکور فرمالیته و بادکنک ارایی
 </span>
         </div>
 
@@ -20,7 +20,7 @@
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
-    </div>
+    </section>
 </body>
 </html>
 <?php 

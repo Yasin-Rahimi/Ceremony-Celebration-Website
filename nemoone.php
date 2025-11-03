@@ -30,9 +30,7 @@
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
 
-        <!-- Dots indicators -->
-        <div class="dots-container" id="dotsContainer"></div>
-
+  
         <!-- Thumbnail navigation -->
         <div class="thumbnails-container">
             <div class="thumbnails-wrapper" id="thumbnailsWrapper"></div>

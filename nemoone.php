@@ -71,14 +71,7 @@ $nemoone_size = sizeof($nemoone_gellery);
         container.innerHTML += element;
     }
 
-    // Generate dots
-    for (let i = 0; i < nemoone_size; i++) {
-        let dot = document.createElement('span');
-        dot.className = 'dot';
-        dot.onclick = function() { currentSlide(i + 1); };
-        dotsContainer.appendChild(dot);
-    }
-
+    
     // Generate thumbnails
     for (let i = 0; i < nemoone_size; i++) {
         let thumbnail = document.createElement('div');

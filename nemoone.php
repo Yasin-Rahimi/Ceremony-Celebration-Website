@@ -49,7 +49,6 @@ $nemoone_size = sizeof($nemoone_gellery);
 
 <script>
     let container = document.querySelector('.slideshow-container');
-    let dotsContainer = document.getElementById('dotsContainer');
     let thumbnailsWrapper = document.getElementById('thumbnailsWrapper');
     let autoplayBtn = document.getElementById('autoplayBtn');
 

@@ -15,9 +15,28 @@
 </span>
         </div>
 
-    <div class="slideshow-container">
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div class="enhanced-slider-container">
+        <!-- Auto-play controls -->
+        <div class="slider-controls">
+            <button class="autoplay-btn" id="autoplayBtn" onclick="toggleAutoplay()">
+                <span class="play-icon">▶</span>
+                <span class="pause-icon">⏸</span>
+            </button>
+        </div>
+
+        <!-- Main slider with navigation arrows -->
+        <div class="slideshow-container">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <!-- Dots indicators -->
+        <div class="dots-container" id="dotsContainer"></div>
+
+        <!-- Thumbnail navigation -->
+        <div class="thumbnails-container">
+            <div class="thumbnails-wrapper" id="thumbnailsWrapper"></div>
+        </div>
     </div>
 
     </section>

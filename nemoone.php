@@ -111,7 +111,6 @@ $nemoone_size = sizeof($nemoone_gellery);
     function showSlides(n) {
         let i;
         let slides = document.getElementsByClassName('mySlides');
-        let dots = document.getElementsByClassName('dot');
         let thumbnails = document.getElementsByClassName('thumbnail');
 
         if (n > slides.length) {slideIndex = 1}
@@ -122,17 +121,13 @@ $nemoone_size = sizeof($nemoone_gellery);
             slides[i].style.display = 'none';
         }
 
-        // Remove active class from all dots and thumbnails
-        for (i = 0; i < dots.length; i++) {
-            dots[i].classList.remove('active');
-        }
+        // Remove active class from all thumbnails
         for (i = 0; i < thumbnails.length; i++) {
             thumbnails[i].classList.remove('active');
         }
 
-        // Show current slide and highlight corresponding dot and thumbnail
+        // Show current slide and highlight corresponding thumbnail
         slides[slideIndex-1].style.display = 'block';
-        dots[slideIndex-1].classList.add('active');
         thumbnails[slideIndex-1].classList.add('active');
 
         // Scroll thumbnail into view

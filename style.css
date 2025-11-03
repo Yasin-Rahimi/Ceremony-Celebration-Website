@@ -153,105 +153,264 @@ nav a:hover{
 /* ------------------ Nemoone kar ------------------*/
 
 #nemoone{
-    height: 720px;
+    min-height: 100vh;
+    padding: 2rem 0;
 }
 .introduce-section{
-    height: 70px;
+    height: auto;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
 }
 .nemoone-text{
     font-family: the-medium;
-    font-size: 23px;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
     font-weight: bolder;
     display: flex;
     align-items: center;
+    text-align: center;
+    padding: 0 1rem;
 }
 
-/* Slideshow container */
-
-.slideshow-container {
-    height: 660px;
-    overflow-y: hidden;
-    width: 1000px;
-    place-self: center;
+/* Enhanced Slider Container */
+.enhanced-slider-container {
+    max-width: 1200px;
+    margin: 0 auto;
     position: relative;
 }
-  
-  /* Hide the images by default */
-  .mySlides {
-    border-radius: 5px;
-    height: 600px;
-    overflow-y: hidden;
+
+/* Auto-play Controls */
+.slider-controls {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
+}
+
+.autoplay-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+.autoplay-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+.autoplay-btn .pause-icon {
     display: none;
 }
-  .mySlides img{
+
+.autoplay-btn.playing .play-icon {
+    display: none;
+}
+
+.autoplay-btn.playing .pause-icon {
+    display: block;
+}
+
+/* Main Slideshow Container */
+.slideshow-container {
+    width: 100%;
+    height: 60vh;
+    min-height: 400px;
+    max-height: 500px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Slides */
+.mySlides {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: fill;
-  }
-  
-  /* Next & previous buttons */
-  .prev, .next {
-    cursor: pointer;
-    position: relative;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    top: 300px;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    position: absolute;
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  /* Caption text */
-  .text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
+    display: none;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.mySlides img {
     width: 100%;
-    text-align: center;
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #000000;
-    font-size: 12px;
-    padding: 8px 12px;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.mySlides:hover img {
+    transform: scale(1.02);
+}
+
+/* Navigation Arrows */
+.prev, .next {
     position: absolute;
-  }
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-  
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 0.6s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 5;
+    user-select: none;
+}
+
+.prev {
+    left: 1rem;
+}
+
+.next {
+    right: 1rem;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Number Text */
+.numbertext {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 14px;
+    z-index: 3;
+}
+
+/* Dots Container */
+.dots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.dot:hover {
+    background: rgba(0, 0, 0, 0.5);
+    transform: scale(1.2);
+}
+
+.dot.active {
+    background: white;
+    border-color: #007bff;
+    transform: scale(1.2);
+}
+
+/* Thumbnails Container */
+.thumbnails-container {
+    margin-top: 1rem;
+    position: relative;
+}
+
+.thumbnails-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding: 1rem;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+.thumbnails-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+
+.thumbnails-wrapper::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.thumbnails-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+}
+
+.thumbnails-wrapper::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.thumbnail {
+    flex-shrink: 0;
+    width: 80px;
+    height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+    position: relative;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail:hover img {
+    transform: scale(1.1);
+}
+
+.thumbnail.active {
+    border-color: #007bff;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Fading animation */
+.fade {
+    animation: fade 0.4s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: scale(1.02); }
+    to { opacity: 1; transform: scale(1); }
+}
 
 
 /* ------------------ Ideas ------------------*/

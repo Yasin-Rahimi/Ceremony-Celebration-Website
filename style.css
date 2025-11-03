@@ -897,19 +897,6 @@ nav a:hover{
 
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
-    .dot {
-        background: rgba(255, 255, 255, 0.3);
-    }
-
-    .dot:hover {
-        background: rgba(255, 255, 255, 0.5);
-    }
-
-    .dot.active {
-        background: #007bff;
-        border-color: #0056b3;
-    }
-
     .numbertext {
         background: rgba(255, 255, 255, 0.9);
         color: black;

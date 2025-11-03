@@ -329,6 +329,10 @@ nav a:hover{
     transition: all 0.3s ease;
     z-index: 5;
     user-select: none;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1;
 }
 
 .prev {
@@ -342,6 +346,11 @@ nav a:hover{
 .prev:hover, .next:hover {
     background: rgba(0, 0, 0, 0.8);
     transform: translateY(-50%) scale(1.1);
+}
+
+.prev:focus, .next:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
 }
 
 /* Number Text */

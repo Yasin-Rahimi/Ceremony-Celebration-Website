@@ -564,6 +564,332 @@ nav a:hover{
 
 
 
+/* ------------------ Responsive Design ------------------*/
+
+/* Mobile First Approach - Base styles already target mobile */
+
+/* Tablet Layout (768px - 1023px) */
+@media (min-width: 768px) {
+    /* Home Page Responsive */
+    #home-container {
+        height: auto;
+        min-height: 70vh;
+        flex-direction: row;
+    }
+
+    .home-section {
+        width: 50%;
+    }
+
+    .home-section:first-child {
+        width: 45%;
+    }
+
+    .home-section:last-child {
+        width: 55%;
+    }
+
+    .home-vactor-holder {
+        height: 80%;
+        width: 85%;
+    }
+
+    .home-text-holder {
+        height: 80%;
+        min-width: 85%;
+    }
+
+    .home-inner-text-holder p {
+        font-size: clamp(1.5rem, 4vw, 2.2rem);
+    }
+
+    .home-inner-text-holder pre {
+        font-size: clamp(0.9rem, 2vw, 1.1rem);
+    }
+
+    .home-button-holder a {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        padding: 0.75rem 1.5rem;
+    }
+
+    /* Slider Responsive */
+    .slideshow-container {
+        height: 50vh;
+        min-height: 450px;
+        max-height: 550px;
+    }
+
+    .thumbnail {
+        width: 100px;
+        height: 75px;
+    }
+
+    .prev, .next {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .autoplay-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+}
+
+/* Desktop Layout (1024px+) */
+@media (min-width: 1024px) {
+    /* Home Page Desktop */
+    #home-container {
+        height: 70vh;
+        max-height: 800px;
+    }
+
+    .home-section {
+        width: 50%;
+    }
+
+    .home-vactor-holder {
+        height: 90%;
+        width: 80%;
+    }
+
+    .home-text-holder {
+        height: 70%;
+        min-width: 80%;
+    }
+
+    .home-inner-text-holder p {
+        font-size: 2.2rem;
+    }
+
+    .home-inner-text-holder pre {
+        font-size: 1rem;
+    }
+
+    .home-button-holder a {
+        font-size: 1.25rem;
+        padding: 0.75rem 2rem;
+    }
+
+    /* Slider Desktop */
+    .slideshow-container {
+        height: 500px;
+        min-height: 500px;
+        max-height: 500px;
+    }
+
+    .thumbnail {
+        width: 120px;
+        height: 90px;
+    }
+
+    .prev, .next {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .autoplay-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .nemoone-text {
+        font-size: 1.4rem;
+    }
+}
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+    .enhanced-slider-container {
+        max-width: 1400px;
+    }
+
+    .thumbnail {
+        width: 140px;
+        height: 105px;
+    }
+}
+
+/* Small Mobile (320px - 479px) */
+@media (max-width: 479px) {
+    /* Home Page Small Mobile */
+    #home-container {
+        min-height: 100vh;
+        padding: 1rem 0;
+    }
+
+    .home-vactor-holder {
+        height: 30vh;
+        width: 95%;
+    }
+
+    .home-text-holder {
+        height: auto;
+        min-width: 90%;
+        padding: 1rem;
+    }
+
+    .home-inner-text-holder {
+        padding-right: 1rem;
+        margin: 1rem auto;
+    }
+
+    .home-inner-text-holder p {
+        font-size: 1.5rem;
+    }
+
+    .home-inner-text-holder pre {
+        font-size: 0.9rem;
+        white-space: pre-wrap;
+    }
+
+    .home-button-holder {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .home-button-holder a {
+        width: 100%;
+        max-width: 300px;
+        font-size: 1rem;
+        padding: 1rem;
+        display: block;
+        text-align: center;
+    }
+
+    /* Slider Small Mobile */
+    .slideshow-container {
+        height: 40vh;
+        min-height: 300px;
+    }
+
+    .prev, .next {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .prev {
+        left: 0.5rem;
+    }
+
+    .next {
+        right: 0.5rem;
+    }
+
+    .autoplay-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .slider-controls {
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+
+    .thumbnail {
+        width: 60px;
+        height: 45px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .numbertext {
+        font-size: 12px;
+        padding: 0.25rem 0.75rem;
+    }
+}
+
+/* Medium Mobile (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    /* Home Page Medium Mobile */
+    .home-vactor-holder {
+        height: 35vh;
+    }
+
+    .home-text-holder {
+        min-width: 85%;
+    }
+
+    .home-inner-text-holder p {
+        font-size: 1.75rem;
+    }
+
+    .home-inner-text-holder pre {
+        font-size: 1rem;
+    }
+
+    .home-button-holder a {
+        font-size: 1.1rem;
+        padding: 0.875rem 1.75rem;
+    }
+
+    /* Slider Medium Mobile */
+    .slideshow-container {
+        height: 45vh;
+        min-height: 350px;
+    }
+
+    .thumbnail {
+        width: 70px;
+        height: 52px;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .thumbnail img,
+    .mySlides img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .fade {
+        animation: none;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .dot {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    .dot:hover {
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    .dot.active {
+        background: #007bff;
+        border-color: #0056b3;
+    }
+
+    .numbertext {
+        background: rgba(255, 255, 255, 0.9);
+        color: black;
+    }
+}
+
+/* ------------------ Font Faces ------------------*/
+
 @font-face {
     font-family: the-bold;
     src: url(fonts/Estedad-Bold.ttf);

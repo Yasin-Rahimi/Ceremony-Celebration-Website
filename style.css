@@ -238,9 +238,6 @@ nav a:hover{
     padding: 8px 12px;
     position: absolute;
   }
-  .active, .dot:hover {
-    background-color: #717171;
-  }
   
   /* Fading animation */
   .fade {

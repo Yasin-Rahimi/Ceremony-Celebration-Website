@@ -250,6 +250,121 @@ nav a:hover{
     to {opacity: 1}
   }
 
+  /* Enhanced Slider Container */
+  .enhanced-slider-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* Auto-play Controls */
+  .slider-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+  }
+
+  .autoplay-btn {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .autoplay-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .autoplay-btn .pause-icon {
+    display: none;
+  }
+
+  .autoplay-btn.playing .play-icon {
+    display: none;
+  }
+
+  .autoplay-btn.playing .pause-icon {
+    display: block;
+  }
+
+  /* Thumbnail Navigation */
+  .thumbnails-container {
+    margin-top: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .thumbnails-wrapper {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .thumbnail {
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+    flex-shrink: 0;
+    opacity: 0.7;
+  }
+
+  .thumbnail:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  .thumbnail.active {
+    border-color: rgba(162, 17, 162, 0.871);
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  .thumbnail img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Enhanced slideshow container adjustments */
+  .enhanced-slider-container .slideshow-container {
+    margin-bottom: 0;
+  }
+
+  /* Touch-friendly adjustments */
+  @media (max-width: 768px) {
+    .thumbnail img {
+      width: 60px;
+      height: 45px;
+    }
+
+    .autoplay-btn {
+      height: 35px;
+      width: 35px;
+      font-size: 14px;
+    }
+
+    .slider-controls {
+      top: 5px;
+      right: 5px;
+    }
+  }
+
 
 /* ------------------ Ideas ------------------*/
 
